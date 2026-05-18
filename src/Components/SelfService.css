@@ -1,0 +1,377 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bungee&family=Bungee+Spice&family=Gravitas+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+.SelfService-dashboard {
+  border-radius: 2rem;
+
+ 
+  border-radius: 13px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+.TopBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+.TopBar-Left {
+  display: flex;
+  flex-direction: column;
+}
+.TopBar-Date {
+  display: grid;
+  gap: 1rem;
+  padding-left: 2rem;
+  border-left: 3px solid #030303;
+  margin-left: 1.8rem;
+}
+.TopBar-right {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  border: 2px solid rgba(0, 128, 0, 0.74);
+  padding: 1rem;
+  border-radius: 1rem;
+  justify-content: space-between;
+}
+.pill-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: green;
+}
+.TopBar-right-info .pill {
+  display: flex;
+}
+/*======================
+SECTION ONE
+===========================*/
+
+.section-one {
+  display: grid;
+}
+.section-one .info {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+.card-group {
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #2a2a3a;
+  border-radius: 13px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.card-group:hover{
+  transform: scale(1.02);
+  transition: all 0.3s ease-in-out;
+}
+.card-group .Title {
+  text-align: center;
+  font-size: 2rem;
+}
+.card-group .Total-attendance {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+.card-group .attendance-track {
+  margin-top: 2rem;
+}
+.card-group .Leave-days {
+  margin-top: 2rem;
+}
+.card-group .Leave-track {
+  margin-top: 2rem;
+}
+.Payslip .Pay-date,
+.Payslip .PayName {
+  margin-top: 2rem;
+}
+.kenya {
+  color: green;
+}
+.Employee-Performance {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0);
+  border: 3px solid;
+}
+.Employee-Performance .Performance-rate {
+  margin-top: 2rem;
+  display: flex;
+  gap: 2px;
+}
+.Employee-Performance .Per-Acknowlegement {
+  margin-top: 2rem;
+}
+
+/*=====================
+SECTION TWO
+===================*/
+.section-two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding: 6px;
+}
+.Payroll {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0);
+  border: 1px solid #2a2a3a;
+  border-radius: 13px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+  padding: 1rem;
+}
+.gross-tax div,
+.pay-tax div,
+.Nhif div,
+.nssf div,
+.net-pay {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+.Payroll div h2{
+    color: #000080;
+      font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.name {
+    font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color:black;
+}
+.gross-tax div .gross-amount{
+    color: black;
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.pay-tax div .pay-tax-amount,
+.Nhif div .nhif-amount,
+.nssf div .nssf-amount{
+    color: rgb(100, 10, 10);
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.net-pay .net-pay-amount{
+    color: rgba(0, 128, 0, 0.651);
+       font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.Payroll button{
+    width: 200px;
+    border: 1px solid black;
+    margin: 0 auto;
+ border-radius: 1rem;
+}
+.Payroll button:hover{
+    background: green;
+}
+
+.performance{
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #2a2a3a;
+    border-radius: 13px;
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+}
+.performance .title{
+    color: #000080;
+      font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+.performance-info{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.performance-info-text .span-h{
+    font-size: 1.5rem;
+}
+.performance-info-text .acknowledgement{
+    background: rgb(250, 180, 93);
+    height: 30px;
+    width: 200px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+.performance-rate{
+    margin-top: 2rem;
+    width: 100%;
+    
+}
+.per-1,
+.per-2,
+.per-3{
+    margin-top: 2rem;
+    display: flex;
+     justify-content: space-between;
+    
+}
+.per-bar-wrap{
+    width: 100%;
+    
+  
+}
+
+.per-bar-1 .progress-bar{
+    width: 94%;
+
+}
+.per-bar-2 .progress-bar{
+    width: 86%;
+   
+}
+.per-bar-3 .progress-bar{
+    width: 80%;
+ 
+    
+}
+
+/*==================
+MEDIA CSS
+==================*/
+@media (max-width: 1146px) {
+  .section-one .info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .TopBar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .section-one .info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.7rem;
+  }
+  .card-group {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 768px) {
+  .TopBar {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  .section-one .info {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.7rem;
+  }
+  .card-group {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .section-two{
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width:590px) {
+    .section-one {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-one .info {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+  
+}
+.card-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+  }
+
+    
+}
+@media (max-width: 480px) {
+  .TopBar {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+  }
+  .TopBar-right {
+    display: flex;
+    margin-left: 2rem;
+  }
+  .section-one {
+    display: flex;
+    flex-direction: column;
+  }
+  .section-one .info {
+    display: flex;
+    flex-direction: column;
+  }
+  .card-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+@media (max-width: 372px) {
+  .TopBar {
+    margin-left: 0;
+  }
+  .TopBar-Date {
+    margin-left: 0;
+  }
+  .TopBar-right {
+    margin-left: 0;
+  }
+  .section-one {
+    display: grid;
+
+    margin-left: 0;
+  }
+  .section-one .info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 320px) {
+  .TopBar {
+    margin-left: 0;
+  }
+  .TopBar-Date {
+    margin-left: 0;
+  }
+  .TopBar-right {
+    margin-left: 0;
+  }
+  .section-one {
+    display: grid;
+
+    margin-left: 0;
+  }
+  .section-one .info {
+    display: flex;
+    flex-direction: column;
+  }
+}
