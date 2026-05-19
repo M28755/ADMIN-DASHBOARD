@@ -1,47 +1,53 @@
-import toast, { Toaster } from 'react-hot-toast'
-import { Routes, Route } from 'react-router-dom'
-import Login from './Pages/Login'
-import Layout from './Pages/Layout'
-import Dashboard from './Pages/Dashboard'
-import Employees from './Pages/Employees'
-import Attendance from './Pages/Attendance'
-import LeaveRequest from './Pages/LeaveRequest'
-import Payslips from './Pages/Payslips'
-import Report from './Pages/Report'
-import Settings from './Pages/Settings'
-import MyTasks from './Pages/MyTasks'
-import MyProfile from './Pages/MyProfile'
-import Documents from './Pages/Documents'
-import Department from './Pages/Department'
+import React from 'react'
+
 import './App.css'
+import SideBar from './Components/SideBar'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Layout  from './Components/Layout'
 
 
+
+function PlaceholderPage({title}){
+  return(
+    < >
+    <main className="page-content">
+      <div className="page-header">
+        <h1>{title}</h1>
+        <p>This Module is under development</p>
+        <p>Please check back later</p>
+      </div>
+    </main>
+
+    </>
+  )
+}
 function App() {
 
 
   return (
-    <>
-      <Toaster />
-      <Routes>
-        <Route path='/login' element={<Login />} />
-        <Route path='/' element={<Layout />}>
-          <Route index element={<Dashboard />} />
-          <Route path='dashboard' element={<Dashboard />} />
-          <Route path='employees' element={<Employees />} />
-          <Route path='attendance' element={<Attendance />} />
-          <Route path='leave' element={<LeaveRequest />} />
-          <Route path='/payslip' element={<Payslips />} />
-          <Route path='/my-profile' element={<MyProfile />} />
-          <Route path='/documents' element={<Documents />} />
-          <Route path='/department' element={<Department />} />
-          <Route path='/reports' element={<Report />} />
-          <Route path='/settings' element={<Settings />} />
-          <Route path='/mytasks' element={<MyTasks />} />
-        </Route>
-      </Routes>
+    
+    
+        <Routes>
+          {/* All pages to share the layout */}
+          <Route path='/' element={<Layout/>}>
+         {/*  <Route index element={<Dashboard/>}/>
+
+           <Route path="employees" element={<PlaceholderPage title="Employees" />} />
+          <Route path="attendance" element={<PlaceholderPage title="Attendance" />} />
+          <Route path="leaves" element={<PlaceholderPage title="Leave Requests" />} />
+          <Route path="departments" element={<PlaceholderPage title="Departments" />} />
+          <Route path="payroll" element={<PlaceholderPage title="Payroll" />} />
+          <Route path="reports" element={<PlaceholderPage title="Reports" />} />
+          <Route path="settings" element={<PlaceholderPage title="Settings" />} /> */}
+           </Route>
+        </Routes>
+
+      
+      
 
 
-    </>
+
+    
   )
 }
 export default App
