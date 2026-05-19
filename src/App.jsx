@@ -24,10 +24,11 @@ function App() {
       <Routes>
         <Route path='/login' element={<Login />} />
         <Route path='/' element={<Layout />}>
-          <Route path='/dashboard' element={<Dashboard />} />
-          <Route path='/employees' element={<Employees />} />
-          <Route path='/attendance' element={<Attendance />} />
-          <Route path='/leave' element={<LeaveRequest />} />
+          <Route index element={<Dashboard />} />
+          <Route path='dashboard' element={<Dashboard />} />
+          <Route path='employees' element={<Employees />} />
+          <Route path='attendance' element={<Attendance />} />
+          <Route path='leave' element={<LeaveRequest />} />
           <Route path='/payslip' element={<Payslips />} />
           <Route path='/my-profile' element={<MyProfile />} />
           <Route path='/documents' element={<Documents />} />
