@@ -1,0 +1,16 @@
+ :root {
+    --bg: #0F1117;
+    --bg-card: #181B25;
+    --bg-sidebar: #13151D;
+    --fg: #E8E9ED;
+    --fg-muted: #6B7084;
+    --accent: #E8A838;
+    --accent-hover: #F0BC5E;
+    --accent-soft: rgba(232,168,56,0.12);
+    --success: #34D399;
+    --danger: #F87171;
+    --warning: #FBBF24;
+    --info: #60A5FA;
+    --border: rgba(255,255,255,0.06);
+    --card-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  }

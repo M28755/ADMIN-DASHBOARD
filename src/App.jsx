@@ -13,6 +13,7 @@ import MyTasks from './Pages/MyTasks'
 import MyProfile from './Pages/MyProfile'
 import Documents from './Pages/Documents'
 import Department from './Pages/Department'
+import './App.css'
 
 
 function App() {
