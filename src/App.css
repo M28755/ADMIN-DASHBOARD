@@ -1,28 +1,95 @@
+/* src/global.css */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700;900&family=Playfair+Display:wght@700;900&display=swap');
+
 :root {
-    --bg: #0F1117;
-    --bg-card: #181B25;
-    --bg-sidebar: #13151D;
-    --fg: #E8E9ED;
-    --fg-muted: #6B7084;
-    --accent: #E8A838;
-    --accent-hover: #F0BC5E;
-    --accent-soft: rgba(232,168,56,0.12);
-    --success: #34D399;
-    --danger: #F87171;
-    --warning: #FBBF24;
-    --info: #60A5FA;
-    --border: rgba(255,255,255,0.06);
-    --card-shadow: 0 4px 24px rgba(0,0,0,0.3);
+  --bg: #0F1117;
+  --bg-card: #181B25;
+  --bg-sidebar: #13151D;
+  --fg: #E8E9ED;
+  --fg-muted: #6B7084;
+  --accent: #E8A838;
+  --accent-hover: #F0BC5E;
+  --accent-soft: rgba(232, 168, 56, 0.12);
+  --success: #34D399;
+  --danger: #F87171;
+  --warning: #FBBF24;
+  --info: #60A5FA;
+  --border: rgba(255, 255, 255, 0.06);
+  --card-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--fg-muted);
+  border-radius: 8px;
+}
+
+/* Base Animation Classes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
   }
-             
- 
- 
-* { margin: 0;
-     padding: 0; 
-     box-sizing: border-box; }
-   body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--bg);
-    color: var(--fg);
-    overflow-x: hidden;
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+.animate-in {
+  animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+/* Base Page Content Padding (used by all pages) */
+.page-content {
+  padding: 28px 32px 48px;
+}
+
+.page-header {
+  margin-bottom: 28px;
+}
+
+.page-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 900;
+  font-size: 32px;
+  letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--fg), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.page-header p {
+  color: var(--fg-muted);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .page-content {
+    padding: 20px 16px;
+  }
+}

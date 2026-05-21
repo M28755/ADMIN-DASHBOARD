@@ -1,53 +1,40 @@
-import React from 'react'
-
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './Components/Layout';
 import './App.css'
-import SideBar from './Components/SideBar'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Layout  from './Components/Layout'
+import Dashboard from './Components/Dashboard';
 
 
-
-function PlaceholderPage({title}){
-  return(
-    < >
+function PlaceholderPage({ title }) {
+  return (
     <main className="page-content">
-      <div className="page-header">
+      <div className="page-header animate-in">
         <h1>{title}</h1>
-        <p>This Module is under development</p>
-        <p>Please check back later</p>
+        <p>This module is under development.</p>
       </div>
     </main>
-
-    </>
-  )
+  );
 }
-function App() {
 
-
+export default function App() {
   return (
-    
-    
-        <Routes>
-          {/* All pages to share the layout */}
-          <Route path='/' element={<Layout/>}>
-         {/*  <Route index element={<Dashboard/>}/>
+    <>
+      <Routes>
+        {/* All pages share the Layout (Sidebar + Topbar) */}
+        <Route path="/" element={<Layout />}>
 
-           <Route path="employees" element={<PlaceholderPage title="Employees" />} />
+          <Route index element={<Dashboard />} />
+
+          {/* Placeholder routes so navigation works without 404 */}
+          <Route path="employees" element={<PlaceholderPage title="Employees" />} />
           <Route path="attendance" element={<PlaceholderPage title="Attendance" />} />
           <Route path="leaves" element={<PlaceholderPage title="Leave Requests" />} />
           <Route path="departments" element={<PlaceholderPage title="Departments" />} />
           <Route path="payroll" element={<PlaceholderPage title="Payroll" />} />
           <Route path="reports" element={<PlaceholderPage title="Reports" />} />
-          <Route path="settings" element={<PlaceholderPage title="Settings" />} /> */}
-           </Route>
-        </Routes>
-
-      
-      
-
-
-
-    
-  )
+          <Route path="settings" element={<PlaceholderPage title="Settings" />} />
+        </Route>
+      </Routes>
+    </>
+  );
 }
-export default App

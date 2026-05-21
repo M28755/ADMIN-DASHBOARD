@@ -1,55 +1,44 @@
-import React , {useState} from "react"
+import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
+import Sidebar from './Sidebar';
+import './SideBar.css';
 
-import SideBar  from "../Components/SideBar"
-import './SideBar.css'
+export default function Layout() {
+  // Default to true so sidebar is visible on desktop
+  const [sidebarOpen, setSidebarOpen] = useState(true);
 
-const Layout = () => {
+  const toggleSidebar = () => {
+    setSidebarOpen(!sidebarOpen);
+  };
 
-  const [sidebarOpen , setSidebarOpen] = useState(true)
-
-  const toggleSidebar = ()=>{
-    setSidebarOpen(!sidebarOpen)
-  }
   return (
-    <>
     <div className="layout-wrapper">
-      <SideBar isOpen={sidebarOpen}/>
+      <Sidebar isOpen={sidebarOpen} />
 
-      <div className= {`main-content ${!sidebarOpen ? 'expanded': ''}`}>
-        {/* Topbar */}
-        <header className= "topbar">
-          <button className= "topbar-toggle" onClick={toggleSidebar} aria-label = "Toggle sidebar">
+      <div className={`main-content ${!sidebarOpen ? 'expanded' : ''}`}>
+        <header className="topbar">
+          <button className="topbar-toggle" onClick={toggleSidebar} aria-label="Toggle sidebar">
             <i className="fas fa-bars"></i>
           </button>
 
           <div className="search-box">
             <i className="fas fa-search"></i>
-            <input type="text" placeholder="Search employees, departments ..." />
-            
+            <input type="text" placeholder="Search employees, departments..." />
           </div>
 
           <div className="topbar-actions">
             <button className="topbar-btn" aria-label="Notifications">
               <i className="fas fa-bell"></i>
-              <span className="notification-dot"></span>
-
+              <span className="dot"></span>
             </button>
             <button className="topbar-btn" aria-label="Messages">
               <i className="fas fa-envelope"></i>
-           
-
             </button>
           </div>
-
         </header>
 
+        <Outlet />
       </div>
-
     </div>
-    
-    
-    </>
-  )
+  );
 }
-
-export default Layout
