@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Layout from './Components/Layout';
 import './App.css'
 import Dashboard from './Components/Dashboard';
+import Employees from './Pages/Employees'
 
 
 function PlaceholderPage({ title }) {
@@ -26,7 +27,7 @@ export default function App() {
           <Route index element={<Dashboard />} />
 
           {/* Placeholder routes so navigation works without 404 */}
-          <Route path="employees" element={<PlaceholderPage title="Employees" />} />
+          <Route path="employees" element={<Employees />} />
           <Route path="attendance" element={<PlaceholderPage title="Attendance" />} />
           <Route path="leaves" element={<PlaceholderPage title="Leave Requests" />} />
           <Route path="departments" element={<PlaceholderPage title="Departments" />} />

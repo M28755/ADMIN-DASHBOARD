@@ -30,13 +30,13 @@
    overflow: hidden;
    transition: all 0.3s ease;
    cursor: pointer;
-
+   transition: all 0.3s ease-in-out;
 
  }
 
  .stat-card:hover {
-   transform: translateY(-3px);
-   border: 4px solid rgba(232, 168, 56, 0.2);
+   transform: scale(1.01111);
+   border: 2px solid rgba(232, 168, 56, 0.2);
    box-shadow: var(--card-shadow);
  }
 

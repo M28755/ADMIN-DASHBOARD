@@ -75,7 +75,7 @@ function Dashboard() {
         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'San'],
         datasets: [
             {
-                labels: 'Present',
+                label: 'Present',
                 data: [215, 220, 218, 222, 218, 140, 45],
                 borderColor: '#34D399',
                 backgroundColor: 'rgba(52,211,153,0.08)',
@@ -86,7 +86,7 @@ function Dashboard() {
                 pointBorderWidth: 0
             },
             {
-                labels: 'Absent',
+                label: 'Absent',
                 data: [12, 8, 14, 6, 15, 18, 5],
                 borderColor: '#F87171',
                 backgroundColor: 'rgba(52,211,153,0.08)',

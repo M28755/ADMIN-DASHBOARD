@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
+import MyImage from '../assets/WhatsApp Image 2026-04-30 at 15.45.09.jpeg'
 
 export default function Sidebar({ isOpen, closeSideBar }) {
     const navItems = [
@@ -62,7 +63,7 @@ export default function Sidebar({ isOpen, closeSideBar }) {
             </nav>
 
             <div className="sidebar-footer">
-                <img src="https://picsum.photos/seed/admin99/80/80.jpg" alt="Admin" />
+                <img src={MyImage} alt="Admin" />
                 <div className="user-info">
                     <strong>OMONDI MICHAEL OTIENO</strong>
                     <small>HR Director</small>
