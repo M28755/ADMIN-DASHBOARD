@@ -275,7 +275,7 @@ function Dashboard() {
                                         <tr key={emp.id}>
                                             <td>
                                                 <div className="emp-cell">
-                                                    <img src={`https://picsum.photos/seed/${emp.avatar}/68/68.jpg`} alt={emp.name} />
+                                                    <img src={`${emp.image}`} alt={emp.name} />
                                                     <div>
                                                         <div className="emp-name">{emp.name}</div>
                                                         <div className="emp-id">{emp.id}</div>
@@ -305,7 +305,7 @@ function Dashboard() {
                             ) : (
                                 PendingLeaves.map(l => (
                                     <div className='leave-item' key={l.id}>
-                                        <img className='leave-avatar' src={`https://picsum.photos/seed/${l.avatar}/76/76.jpg`} alt={l.name} />
+                                        <img className='leave-avatar' src={`${l.avatar}`} alt={l.name} />
 
                                         <div className="leave-info">
                                             <div className="leave-name">{l.name}</div>
@@ -364,7 +364,7 @@ function Dashboard() {
                                         <div className="dept-icon" style={{ background: `${d.color}20`, color: d.color }}>
                                             <i className={`fas ${d.icon}`}></i>
                                         </div>
-                                        <div className="dept-name">{d.name}</div>
+                                        <div className="dept-name " style={{ color: `${d.color}` }}>{d.name}</div>
                                         <div className="dept-count">{d.count}members</div>
                                         <div className="dept-bar">
                                             <div className="dept-bar-fill" style={{ width: `${d.budget}%`, background: d.color }}></div>

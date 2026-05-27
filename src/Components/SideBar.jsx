@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Sidebar.css';
 
-export default function Sidebar({ isOpen }) {
+export default function Sidebar({ isOpen, closeSideBar }) {
     const navItems = [
         { path: '/', label: 'Dashboard', icon: 'fa-th-large', section: 'Main' },
         { path: '/employees', label: 'Employees', icon: 'fa-users', section: 'Main' },
@@ -16,15 +16,26 @@ export default function Sidebar({ isOpen }) {
 
     const sections = ['Main', 'Management', 'System'];
 
+
+
+
+
     return (
         // If isOpen is false, add the 'collapsed' class. Otherwise, no extra class.
-        <aside className={`sidebar ${!isOpen ? 'collapsed' : ''}`}>
+        <aside className={`sidebar ${!isOpen ? 'collapsed' : 'open'}`}>
             <div className="sidebar-logo">
                 <div className="logo-icon">EM</div>
                 <div className="logo-text">
                     <span>EmpManage</span>
                     <small>Employer Management</small>
                 </div>
+
+                <div>
+                    <button className="sidebar-close-btn" onClick={closeSideBar} aria-label="Close menu">
+                        <i className="fas fa-times"></i>
+                    </button>
+                </div>
+
             </div>
 
             <nav className="nav-section">
@@ -37,7 +48,8 @@ export default function Sidebar({ isOpen }) {
                                 <NavLink
                                     key={item.path}
                                     to={item.path}
-                                    end={item.path === '/'} // 'end' prop ensures exact match for dashboard
+                                    end={item.path === '/'}
+                                    onClick={closeSideBar}
                                     className={({ isActive }) => isActive ? "nav-item active" : "nav-item"}
                                 >
                                     <i className={`fas ${item.icon}`}></i>

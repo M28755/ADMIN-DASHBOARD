@@ -5,15 +5,22 @@ import './SideBar.css';
 
 export default function Layout() {
   // Default to true so sidebar is visible on desktop
-  const [sidebarOpen, setSidebarOpen] = useState(true);
+  const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
+  const closeSideBar = () => {
+    if (window.innerWidth <= 768) {
+      setSidebarOpen(false)
+    }
+
+  }
+
   return (
     <div className="layout-wrapper">
-      <Sidebar isOpen={sidebarOpen} />
+      <Sidebar isOpen={sidebarOpen} closeSideBar={closeSideBar} />
 
       <div className={`main-content ${!sidebarOpen ? 'expanded' : ''}`}>
         <header className="topbar">
