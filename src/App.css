@@ -62,7 +62,7 @@ body {
   animation: fadeInUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) both;
 }
 
-/* Base Page Content Padding (used by all pages) */
+
 .page-content {
   padding: 28px 32px 48px;
 }

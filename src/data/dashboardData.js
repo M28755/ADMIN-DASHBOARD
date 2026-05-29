@@ -1,16 +1,39 @@
 
 export const employees = [
-    { id: 'EMP001', name: 'Michael Otieno', dept: 'Engineering', pos: 'Lead Developer', status: 'active', image: 'https://thumbs.dreamstime.com/b/civil-engineer-10141676.jpg' },
+    {
+        id: 'EMP001', name: 'Michael Otieno', dept: 'Engineering', pos: 'Lead Developer', status: 'active', image: 'https://thumbs.dreamstime.com/b/civil-engineer-10141676.jpg', email: 'michael@gmail.com'
+
+    },
     {
         id: 'EMP002', name: 'Samuel Omondi', dept: 'Design', pos: 'UX Designer', status: 'active',
-        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxNiD_wTiOq3Boi3xuXhw4APRgf1RPh_CEKQ&s'
+        image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxNiD_wTiOq3Boi3xuXhw4APRgf1RPh_CEKQ&s',
+        email: 'samomondi@gmail.com'
     },
-    { id: 'EMP003', name: 'Jack Felix', dept: 'Marketing', pos: 'Campaign Manager', status: 'remote', image: 'https://static.vecteezy.com/system/resources/thumbnails/021/512/314/small/portrait-of-asian-businessman-wearing-suit-on-blue-background-photo.jpg' },
-    { id: 'EMP004', name: 'Oyamo David', dept: 'Sales', pos: 'Sales Director', status: 'leave', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3qTrXd65dtRAXSBLsY08hl1PDRSiNkTbEFg&s' },
-    { id: 'EMP005', name: 'Florine Akinyi', dept: 'Engineering', pos: 'Backend Engineer', status: 'active', image: 'https://png.pngtree.com/png-vector/20240115/ourmid/pngtree-african-american-female-engineer-in-helmet-and-reflective-vest-on-white-png-image_11436393.png' },
-    { id: 'EMP006', name: 'Varian Orembo', dept: 'HR', pos: 'HR Manager', status: 'active', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7MYUt2jEW4E7sUV0h-jf3sL0q1T4PZ1lmtw&s' },
-    { id: 'EMP007', name: "Odhiambo Isaach", dept: 'Finance', pos: 'Financial Analyst', status: 'active', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3KzrhrBaRkMyVmPBrU68-b0yYItVDj3Vmuw&s' },
-    { id: 'EMP008', name: 'Benedict Oduor', dept: 'Design', pos: 'Visual Designer', status: 'active', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8csyoi5Vut7sMGEsUb7My1e4dyxlFnaTR-g&s' },
+    {
+        id: 'EMP003', name: 'Jack Felix', dept: 'Marketing', pos: 'Campaign Manager', status: 'remote', image: 'https://static.vecteezy.com/system/resources/thumbnails/021/512/314/small/portrait-of-asian-businessman-wearing-suit-on-blue-background-photo.jpg', email: 'jack2123@gmail.com'
+
+    },
+    {
+        id: 'EMP004', name: 'Oyamo David', dept: 'Sales', pos: 'Sales Director', status: 'leave', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3qTrXd65dtRAXSBLsY08hl1PDRSiNkTbEFg&s', email: 'doyamo@gmail.com'
+
+    },
+    {
+        id: 'EMP005', name: 'Florine Akinyi', dept: 'Engineering', pos: 'Backend Engineer', status: 'active', image: 'https://png.pngtree.com/png-vector/20240115/ourmid/pngtree-african-american-female-engineer-in-helmet-and-reflective-vest-on-white-png-image_11436393.png',
+        email: 'akinyi@gmail.com'
+
+    },
+    {
+        id: 'EMP006', name: 'Varian Orembo', dept: 'HR', pos: 'HR Manager', status: 'active', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7MYUt2jEW4E7sUV0h-jf3sL0q1T4PZ1lmtw&s'
+        , email: 'varianOrembo@gmail.com'
+    },
+    {
+        id: 'EMP007', name: "Odhiambo Isaach", dept: 'Finance', pos: 'Financial Analyst', status: 'active', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3KzrhrBaRkMyVmPBrU68-b0yYItVDj3Vmuw&s', email: 'isaach0987@gmail.com'
+
+    },
+    {
+        id: 'EMP008', name: 'Benedict Oduor', dept: 'Design', pos: 'Visual Designer', status: 'active', image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8csyoi5Vut7sMGEsUb7My1e4dyxlFnaTR-g&s', email: 'benetoduor@gmail.com'
+
+    },
 ];
 
 export const initialLeaveRequests = [

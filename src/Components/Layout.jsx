@@ -3,9 +3,11 @@ import { Outlet } from 'react-router-dom';
 import Sidebar from './Sidebar';
 import './SideBar.css';
 
+
 export default function Layout() {
   // Default to true so sidebar is visible on desktop
   const [sidebarOpen, setSidebarOpen] = useState(window.innerWidth > 768);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -17,6 +19,7 @@ export default function Layout() {
     }
 
   }
+
 
   return (
     <div className="layout-wrapper">
@@ -30,7 +33,10 @@ export default function Layout() {
 
           <div className="search-box">
             <i className="fas fa-search"></i>
-            <input type="text" placeholder="Search employees, departments..." />
+            <input type="text" placeholder="Search employees, departments..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
           </div>
 
           <div className="topbar-actions">
@@ -44,8 +50,12 @@ export default function Layout() {
           </div>
         </header>
 
-        <Outlet />
+        <Outlet context={{ searchQuery }} />
       </div>
+
+
+
+
     </div>
   );
 }
